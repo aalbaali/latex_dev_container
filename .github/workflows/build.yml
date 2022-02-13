@@ -24,7 +24,7 @@ jobs:
         run: |
           docker build -t $GITHUB_REPOSITORY -f ./.devcontainer/Dockerfile .
           docker run -v $GITHUB_WORKSPACE:$GITHUB_WORKSPACE -w $GITHUB_WORKSPACE $GITHUB_REPOSITORY \
-          /bin/zsh -c "echo '\033[92;1mBuilding latex file using Make\033[0m' && make"
+          /bin/zsh "echo 'Building latex file using Make'"
 
   verify:
     if: github.event_name == 'pull_request'
