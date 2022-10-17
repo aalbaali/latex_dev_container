@@ -83,8 +83,8 @@ jobs:
         run: |
           echo '| ${{ env.PDF_LINK }} | ${{ env.DATE }} | ${{ env.COMMIT }} |' >> wiki/Releases.md
           cd wiki
-          git config user.name homework-bot
-          git config user.email homework-bot@github.com
+          git config user.name wiki-bot
+          git config user.email wiki-bot@github.com
           git add .
           git commit -m "Update pdf: ${{ steps.tag_version.outputs.new_tag  }}" --allow-empty
           git push

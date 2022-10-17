@@ -84,8 +84,8 @@ jobs:
           echo \`\`\` >> wiki/Home.md
           echo 'Latest [PDF](data/${{ github.event.repository.name }}.pdf) built on ${{ steps.date.outputs.date }}' >> wiki/Home.md
           cd wiki
-          git config user.name homework-bot
-          git config user.email homework-bot@github.com
+          git config user.name wiki-bot
+          git config user.email wiki-bot@github.com
           git add .
           git commit -m "Update pdf: ${{ github.sha }}" --allow-empty
           git push
